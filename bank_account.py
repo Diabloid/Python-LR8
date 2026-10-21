@@ -1,9 +1,4 @@
-﻿"""
-Модуль bank_account.py
-Містить реалізацію класу BankAccount для моделювання банківського рахунку.
-"""
-
-class BankAccount:
+﻿class BankAccount:
     """Клас для керування банківським рахунком."""
 
     def __init__(self, initial_balance: float = 0.0) -> None:

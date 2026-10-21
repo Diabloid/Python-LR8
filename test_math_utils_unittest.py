@@ -1,14 +1,9 @@
-﻿"""
-Модуль test_math_utils_unittest.py
-Unit-тести для модуля math_utils з використанням вбудованої бібліотеки unittest.
-"""
-
-import unittest
+﻿import unittest
 from math_utils import add, is_even, factorial
 
 
 class TestMathUtilsUnittest(unittest.TestCase):
-    # --- Тести для add ---
+    # Тести для add
     def test_add_positive_numbers(self):
         self.assertEqual(add(2, 3), 5)
         self.assertEqual(add(100, 250), 350)
@@ -28,7 +23,7 @@ class TestMathUtilsUnittest(unittest.TestCase):
         with self.assertRaises(TypeError):
             add(None, 5)
 
-    # --- Тести для is_even ---
+    # Тести для is_even
     def test_is_even_with_even_numbers(self):
         self.assertTrue(is_even(2))
         self.assertTrue(is_even(100))
@@ -51,7 +46,7 @@ class TestMathUtilsUnittest(unittest.TestCase):
         with self.assertRaises(TypeError):
             is_even(True)
 
-    # --- Тести для factorial ---
+    # Тести для factorial
     def test_factorial_zero_and_one(self):
         self.assertEqual(factorial(0), 1)
         self.assertEqual(factorial(1), 1)

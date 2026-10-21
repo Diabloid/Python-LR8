@@ -1,9 +1,4 @@
-﻿"""
-Модуль math_utils.py
-Містить базові математичні функції для демонстрації модульного тестування.
-"""
-
-def add(a: float, b: float) -> float:
+﻿def add(a: float, b: float) -> float:
     """Додає два числа."""
     if not isinstance(a, (int, float)) or not isinstance(b, (int, float)):
         raise TypeError("Обидва аргументи повинні бути числами (int або float).")

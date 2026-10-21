@@ -1,14 +1,8 @@
-﻿"""
-Модуль test_math_utils.py
-Unit-тести для модуля math_utils з використанням фреймворку pytest.
-(Альтернативна реалізація до test_math_utils_unittest.py для порівняння).
-"""
-
-import pytest
+﻿import pytest
 from math_utils import add, is_even, factorial
 
 
-# --- Тести для функції add ---
+# Тести для функції add
 def test_add_positive():
     assert add(5, 7) == 12
     assert add(20, 30) == 50
@@ -32,7 +26,7 @@ def test_add_invalid_input_types():
         add([1], 2)
 
 
-# --- Тести для функції is_even ---
+# Тести для функції is_even
 def test_is_even_true():
     assert is_even(4) is True
     assert is_even(0) is True
@@ -59,7 +53,7 @@ def test_is_even_type_error():
         is_even(True)
 
 
-# --- Тести для функції factorial ---
+# Тести для функції factorial
 def test_factorial_base_cases():
     assert factorial(0) == 1
     assert factorial(1) == 1

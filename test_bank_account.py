@@ -1,9 +1,4 @@
-﻿"""
-Модуль test_bank_account.py
-Unit-тести для класу BankAccount з використанням unittest, setUp() та tearDown().
-"""
-
-import unittest
+﻿import unittest
 from bank_account import BankAccount
 
 
@@ -17,7 +12,7 @@ class TestBankAccount(unittest.TestCase):
         """Очищення ресурсів після виконання тесту."""
         self.account = None
 
-    # --- Перевірка початкового балансу ---
+    # Перевірка початкового балансу
     def test_default_initial_balance(self):
         default_account = BankAccount()
         self.assertEqual(default_account.get_balance(), 0.0)
@@ -33,7 +28,7 @@ class TestBankAccount(unittest.TestCase):
         with self.assertRaises(TypeError):
             BankAccount("one hundred")
 
-    # --- Позитивні сценарії (deposit, withdraw) ---
+    # Позитивні сценарії (deposit, withdraw)
     def test_deposit_valid_amount(self):
         new_balance = self.account.deposit(50.0)
         self.assertEqual(new_balance, 150.0)
@@ -54,7 +49,7 @@ class TestBankAccount(unittest.TestCase):
         self.assertEqual(new_balance, 0.0)
         self.assertEqual(self.account.get_balance(), 0.0)
 
-    # --- Негативні сценарії (ValueError, TypeError) ---
+    # Негативні сценарії (ValueError, TypeError)
     def test_deposit_negative_or_zero_amount(self):
         with self.assertRaises(ValueError):
             self.account.deposit(0)
